@@ -1,8 +1,8 @@
 #Conversor de Moedas
-Descrição
+##Descrição
 Este projeto é um conversor de moedas que permite aos usuários converter valores entre diferentes moedas em tempo real. Utiliza a API de taxas de câmbio para obter as taxas mais recentes e fornece uma interface amigável para realizar as conversões.
 
-Tecnologias Utilizadas
+##Tecnologias Utilizadas
 HTML: Estrutura básica da página.
 CSS: Estilização da interface.
 JavaScript: Lógica de conversão e integração com a API.
