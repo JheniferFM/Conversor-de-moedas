@@ -2,8 +2,18 @@ const input = document.getElementById("valor");
 const select = document.getElementById("moeda");
 const btn = document.getElementById("btn");
 const res = document.getElementById("res");
+const text = document.getElementById("text");
 
 let converter = () => {
+
+  if (input.value.trim() === "") {
+    text.innerHTML = "Por favor, insira um valor";
+    res.innerHTML = "";
+    return;
+  } else {
+    text.innerHTML = "";
+  }
+
   fetch(`https://economia.awesomeapi.com.br/json/last/${select.value}`)
     .then((response) => response.json())
     .then((data) => {
@@ -30,6 +40,7 @@ let inserirDadosHTML = (calcData) => {
   if (!calcData) {
     divResult.style.display = "none";
   }
+
   res.innerHTML = "";
 
   res.innerHTML = `
@@ -42,10 +53,3 @@ let inserirDadosHTML = (calcData) => {
 };
 
 btn.addEventListener("click", converter);
-
-// kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
-// certeza que foi o Saraiva simme eu so percbi ontem , depois de meses
-// não vai querer arrumar nada não antes ? da uma olhada aí ta perfeito , depois eu te mostro oq fizeram no meu github , algum dos meninos, salvaram la com o nome "testiculos"
-// o Saraiva é o unico que faria um merda dessas , sim
-// fiquei sabendo que o marco tava de olho em uma menina tirando foto dela que histori
-//a é essa ? foi du nada , fogo no rabo
